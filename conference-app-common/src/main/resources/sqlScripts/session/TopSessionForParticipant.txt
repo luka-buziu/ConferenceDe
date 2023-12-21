@@ -1,0 +1,5 @@
+Select first_name,last_name,email FROM users where users.user_id =Any
+	(select user_id from participant_event where event_id=2)
+
+
+

@@ -1,0 +1,4 @@
+SELECT session_id,title,session_rate,name,last_name FROM public.session_speaker_info  as session_speaker1
+INNER JOIN public.speaker ON session_speaker1.speaker_id=speaker.id where session_id in
+( SELECT public.session.id FROM public.session order by session.session_rate limit 3 )
+
